@@ -20,6 +20,8 @@ public class Ejercicio1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce una frase:");
         String frase = scanner.nextLine();
+        scanner.close();
+
         System.out.println(primeraMyuscula(frase));
     }
 }
