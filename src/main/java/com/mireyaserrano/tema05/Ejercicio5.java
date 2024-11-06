@@ -8,6 +8,7 @@ public class Ejercicio5 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Itroduce una frase y te digo cual es la palabra con más letras");
         String frase = scanner.nextLine();
+        scanner.close();
         String [] palabras = frase.split("\\s+");
         for (int i = 0; i < palabras.length; i++){
             if (palabras[i].length() > palabraLarga.length()){
