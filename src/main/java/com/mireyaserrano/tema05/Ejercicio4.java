@@ -7,6 +7,7 @@ public class Ejercicio4 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduce una frase y te digo las mayusculas y minusculas que hay en cada palabra");
         String frase = scanner.nextLine();
+        frase = frase.toLowerCase();
         String palabra;
         int vocales = 0;
         int consonantes = 0;
