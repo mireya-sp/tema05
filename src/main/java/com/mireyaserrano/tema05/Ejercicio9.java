@@ -5,12 +5,11 @@ import java.util.Scanner;
 public class Ejercicio9 {
 
     public static String fraseImpares(String frase){
-        for (int i = 0; i < frase.length(); i++){
-            if (i % 2 != 0){
-                frase = frase.replace(frase.charAt(i), ' ');
-            }
+        StringBuilder impares = new StringBuilder();
+        for (int i = 1; i < frase.length(); i+=2){
+            impares.append((frase.charAt(i)));
         }
-        return frase;
+        return impares.toString().trim();
     }
 
     public static void main(String args[]){
