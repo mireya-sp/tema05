@@ -12,7 +12,7 @@ public class Ejercicio14 {
      * @param k tercer dígito de los números a imprimir
      * @param a cuarto dígito de los números a imprimir
      * @param leter es la letra que hay que poner en vez del número
-     * @return
+     * @return la cadena de números con las letras cambiadas en los correspondientes
      */
     public static String cambioNumLetr(int num, int i, int j, int k, int a, char leter){
         String resultado;

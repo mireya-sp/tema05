@@ -7,7 +7,7 @@ public class Ejercicio15 {
      * guarda la fila con el ancho calculado
      * @param ancho los caracteres que va a ocupar (que se van a imprimir) la fila
      * @param caracter el caracter con el que tienen que estar escritas las filas
-     * @return
+     * @return la fila de caracteres segun el tamaño ancho introducido
      */
     public static String filas(int ancho, char caracter){
         String fila = "";

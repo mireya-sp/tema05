@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Ejercicio16 {
     /**
-     * solicita el DNI y devuelve el int DIN
+     * solicita el DNI
      * @param mensaje Mensaje que ve el usuario
-     * @return
+     * @return devuelve el int DNI
      */
     public static int solicitarDNI(String mensaje){
         Scanner scanner = new Scanner(System.in);
@@ -16,9 +16,9 @@ public class Ejercicio16 {
     }
 
     /**
-     * calcula la letra del NIF a partir de el DNI y devuelve un string del DNI más la letra
+     * calcula la letra del NIF a partir de el DNI
      * @param dni El DNI para el cual hay que calcular la letra del NIF
-     * @return
+     * @return devuelve un string del DNI más la letra
      */
     public static String calcularNIF(int dni){
         int resto;
