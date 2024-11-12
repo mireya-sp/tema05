@@ -3,7 +3,11 @@ package com.mireyaserrano.tema05;
 import java.util.Scanner;
 
 public class Ejercicio16 {
-
+    /**
+     * solicita el DNI y devuelve el int DIN
+     * @param mensaje Mensaje que ve el usuario
+     * @return
+     */
     public static int solicitarDNI(String mensaje){
         Scanner scanner = new Scanner(System.in);
         System.out.print(mensaje);
@@ -11,6 +15,11 @@ public class Ejercicio16 {
         return dni;
     }
 
+    /**
+     * calcula la letra del NIF a partir de el DNI y devuelve un string del DNI más la letra
+     * @param dni El DNI para el cual hay que calcular la letra del NIF
+     * @return
+     */
     public static String calcularNIF(int dni){
         int resto;
         String letrasNIF = "TRWAGMYFPDXBNJZSQVHLCKE";

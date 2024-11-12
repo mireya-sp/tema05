@@ -4,7 +4,9 @@ import java.util.Scanner;
 import static com.mireyaserrano.tema05.lib.IO.solicitarInt;
 
 public class Ejercicio13 {
-
+    /**
+     * Imprime el menu principal
+     */
     public static void mostrarMenu(){
         System.out.println("MENÚ PRINCIPAL");
         System.out.println("==============");
@@ -15,6 +17,9 @@ public class Ejercicio13 {
         System.out.println("0. Salir.");
     }
 
+    /**
+     * Calcula la ocion1
+     */
     public static void opcion1(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("\033[H\033[2J");
@@ -32,6 +37,9 @@ public class Ejercicio13 {
         System.out.printf("La palabra más larga es [%s]\n", Ejercicio5.palabraLarga(palabras));
     }
 
+    /**
+     * Calcula la opcion2
+     */
     public static void opcion2(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("\033[H\033[2J");
@@ -59,6 +67,9 @@ public class Ejercicio13 {
         System.out.printf("La palabra más corta es [%s]\n", palabraCorta);
     }
 
+    /**
+     * Calcula la opcion3
+     */
     public static void opcion3(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("\033[H\033[2J");

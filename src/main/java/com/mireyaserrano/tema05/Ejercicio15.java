@@ -3,7 +3,12 @@ package com.mireyaserrano.tema05;
 import java.util.Scanner;
 
 public class Ejercicio15 {
-
+    /**
+     * guarda la fila con el ancho calculado
+     * @param ancho los caracteres que va a ocupar (que se van a imprimir) la fila
+     * @param caracter el caracter con el que tienen que estar escritas las filas
+     * @return
+     */
     public static String filas(int ancho, char caracter){
         String fila = "";
         for (int i = 1; i <= ancho; i++){

@@ -4,7 +4,16 @@ import java.util.Scanner;
 import static com.mireyaserrano.tema05.lib.IO.solicitarInt;
 
 public class Ejercicio14 {
-
+    /**
+     * Calcula si alguno de los números que se imprimen son el número introducido a cambiar por una letra
+     * @param num es el número a cabiar por una letra
+     * @param i primer dígito de los números a imprimir
+     * @param j segundo dígito de los números a imprimir
+     * @param k tercer dígito de los números a imprimir
+     * @param a cuarto dígito de los números a imprimir
+     * @param leter es la letra que hay que poner en vez del número
+     * @return
+     */
     public static String cambioNumLetr(int num, int i, int j, int k, int a, char leter){
         String resultado;
         if (i == num && j == num && k == num && a == num){
