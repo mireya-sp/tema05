@@ -20,7 +20,7 @@ public class Ejercicio18 {
      * @param fecha la fecha a partir de la cual calculamos el luky number del usuario
      * @return la suma de los números que contenga el string fecha introducido
      */
-    public static int primeraSuma(String fecha){
+    public static int suma(String fecha){
         String numeros = "";
         int suma = 0;
         for (int i = 0; i < fecha.length(); i++){
@@ -37,7 +37,7 @@ public class Ejercicio18 {
 
     public static void main(String args[]){
         String fecha = solicitarFecha("Introduzca su fecha de nacimiento en formato dd-mm-aaaa:");
-        String primerResultado = "" + primeraSuma(fecha);
-        System.out.println("Tu 'luky number' es: " + primeraSuma(primerResultado));
+        String primerResultado = "" + suma(fecha);
+        System.out.println("Tu 'luky number' es: " + suma(primerResultado));
     }
 }
