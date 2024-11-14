@@ -1,6 +1,7 @@
 package com.mireyaserrano.tema05;
 
 import java.util.Scanner;
+import com.mireyaserrano.tema05.lib.IO;
 
 public class Ejercicio11 {
     public static void main(String args[]){
@@ -39,10 +40,18 @@ public class Ejercicio11 {
         System.out.printf("d) %d\n", caracterFinal);
 
 
-        System.out.printf("e) %s.%s.%s\n", nombre.charAt(0), apellido1.charAt(0), apellido2.charAt(0));
+        String e = nombreCompleto.toString();
+        String letra = "" + e.charAt(0);
+        letra = letra.toLowerCase();
+        char primeraLetra = letra.charAt(0);
+        e = e.replace(e.charAt(0), primeraLetra);
+        letra = letra.toUpperCase();
+        primeraLetra = letra.charAt(0);
+        e = e.replace(e.charAt(0), primeraLetra);
+        System.out.printf("e) %s\n", e);
 
         System.out.printf("f) ***%s***\n", nombreCompleto);
 
-        System.out.println("g) " + sb.append(nombre).append(" ").append(apellido1).append(" ").append(apellido2).reverse());
+        System.out.printf("g) %s\n", sb.reverse());
     }
 }
