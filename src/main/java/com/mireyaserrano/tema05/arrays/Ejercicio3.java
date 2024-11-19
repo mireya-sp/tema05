@@ -1,20 +1,13 @@
 package com.mireyaserrano.tema05.arrays;
 
 import com.mireyaserrano.tema05.lib.Escaner;
+import com.mireyaserrano.tema05.lib.IO;
 
 public class Ejercicio3 {
     public static void main(String args[]) {
-        int[] numeros = new int[20];
-        for (int i = 0; i < numeros.length; i++){
-            System.out.printf("Introduce el elemento numérico %d: ", (i+1));
-            int num = Escaner.lector.nextInt();
-            numeros[i] = num;
-        }
-        for (int i = 0; i < numeros.length; i++) {
-            System.out.printf("%-5d", numeros[i]);
-            if ((i + 1) % 4 == 0) {
-                System.out.println();
-            }
-        }
+        final int TAMANYO_ARRAY = 20;
+        double[] array = new double[TAMANYO_ARRAY];
+        IO.rellenarArray(array, 100, 1000);
+        System.out.println(IO.arrayToString(array, 4, 4));
     }
 }

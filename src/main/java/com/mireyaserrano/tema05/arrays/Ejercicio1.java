@@ -1,9 +1,6 @@
 package com.mireyaserrano.tema05.arrays;
 
-import com.mireyaserrano.tema05.lib.Escaner;
 import com.mireyaserrano.tema05.lib.IO;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Ejercicio1 {

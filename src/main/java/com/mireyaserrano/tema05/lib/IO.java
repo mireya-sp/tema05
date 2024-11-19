@@ -1,5 +1,6 @@
 package com.mireyaserrano.tema05.lib;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -92,4 +93,62 @@ public class IO{
         }
         return suma / array.length;
     }
+
+
+    public static void solicitarDatosArray(char[] array){
+        if (array == null){
+            return;
+        }
+        for (int i = 0; i < array.length; i++){
+            System.out.printf("a [%d]?\n", i);
+            array[i] = Escaner.lector.nextLine().charAt(0);
+        }
+    }
+
+    public enum Paridad{
+        PAR, IMPAR
+    }
+
+    public static String arrayToString(char[] array, Paridad paridad){
+        final int NUM_ELEMENTOS = paridad == Paridad.PAR ? array.length / 2 : array.length / 2+1;
+        char [] resultado = new char [NUM_ELEMENTOS];
+        int contador = 0;
+        for (int i = paridad == Paridad.PAR ? 0: 1; i < array.length; i += 2){
+            resultado[contador++] = array[i];
+        }
+        return Arrays.toString(resultado);
+    }
+
+    public static int determinarLongitudMaxima(double[] array, int decimales){
+        int longitudMaxima = 0;
+        String formato = "%." + decimales + "f";
+        for (int i = 0; i < array.length; i++){
+            int longitudActual = String.format(formato, array[i]).length();
+            if (){
+
+            }
+        }
+    }
+
+    public static String arrayToString(double[] array, int decimales, int columnas){
+        return arrayToString(array, decimales, columnas, 1)
+    }
+
+    public static String arrayToString(double[] array, int decimales, int columnas, int padding){
+        if (array == null){
+            return null;
+        }
+        StringBuilder sb = new StringBuilder();
+        String formato = "%." + decimales + "f";
+        int tamanyoColumna = determinarLongitudMaxima(array, decimales) + padding;
+        String formatoColumna = "%" + tamanyoColumna + "s";
+        for (int i = 0; i < array.length; i++){
+            sb.append(String.format(formatoColumna, String.format(formato, array[i]));
+            if ((i + 1) % columnas == 0){
+                sb.append("\n");
+            }
+        }
+        return sb.toString();
+    }
+
 }
