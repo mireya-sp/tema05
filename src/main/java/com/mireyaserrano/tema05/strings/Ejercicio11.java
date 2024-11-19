@@ -1,7 +1,6 @@
-package com.mireyaserrano.tema05;
+package com.mireyaserrano.tema05.strings;
 
 import java.util.Scanner;
-import com.mireyaserrano.tema05.lib.IO;
 
 public class Ejercicio11 {
     public static void main(String args[]){

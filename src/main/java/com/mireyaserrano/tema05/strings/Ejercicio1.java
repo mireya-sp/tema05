@@ -1,4 +1,4 @@
-package com.mireyaserrano.tema05;
+package com.mireyaserrano.tema05.strings;
 
 import java.util.Scanner;
 
