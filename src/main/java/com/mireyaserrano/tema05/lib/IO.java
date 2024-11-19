@@ -122,16 +122,17 @@ public class IO{
     public static int determinarLongitudMaxima(double[] array, int decimales){
         int longitudMaxima = 0;
         String formato = "%." + decimales + "f";
-        for (int i = 0; i < array.length; i++){
-            int longitudActual = String.format(formato, array[i]).length();
-            if (){
-
+        for (double numero : array){
+            int longitudActual = String.format(formato, numero).length();
+            if (longitudMaxima < longitudActual){
+                longitudMaxima = longitudActual;
             }
         }
+        return longitudMaxima;
     }
 
     public static String arrayToString(double[] array, int decimales, int columnas){
-        return arrayToString(array, decimales, columnas, 1)
+        return arrayToString(array, decimales, columnas, 2);
     }
 
     public static String arrayToString(double[] array, int decimales, int columnas, int padding){
@@ -139,11 +140,11 @@ public class IO{
             return null;
         }
         StringBuilder sb = new StringBuilder();
-        String formato = "%." + decimales + "f";
         int tamanyoColumna = determinarLongitudMaxima(array, decimales) + padding;
+        String formato = "%" + tamanyoColumna + "." + decimales + "f";
         String formatoColumna = "%" + tamanyoColumna + "s";
         for (int i = 0; i < array.length; i++){
-            sb.append(String.format(formatoColumna, String.format(formato, array[i]));
+            sb.append(String.format(formatoColumna, String.format(formato, array[i])));
             if ((i + 1) % columnas == 0){
                 sb.append("\n");
             }
