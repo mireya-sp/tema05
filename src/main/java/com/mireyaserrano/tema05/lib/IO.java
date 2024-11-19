@@ -1,5 +1,6 @@
 package com.mireyaserrano.tema05.lib;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class IO{
@@ -38,5 +39,57 @@ public class IO{
             }
         } while (respuesta<min||respuesta>max);
         return respuesta;
+    }
+
+    public static void solicitarDatosArray(double[] array){
+        if (array == null){
+            return ;
+        }
+        for (int i = 0; i < array.length; i++){
+            System.out.printf("a [%d]?\n", i);
+            array[i] = Double.parseDouble(Escaner.lector.nextLine());
+        }
+    }
+
+    public static String arrayToString(double[] array, int decimales){
+        if (array == null){
+            return null;
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        String espacio = "";
+        String coma = ",";
+        String formato = "%." + decimales + "f";
+        for (int i = 0; i < array.length; i++){
+            if (i == array.length-1){
+                coma = "";
+            }
+            sb.append(espacio).append(String.format("%.4f", array[i])).append(coma);
+            if (i == 0){
+                espacio = " ";
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
+    public static void rellenarArray(double[] array, double valorMinimo, double valorMaximo){
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++){
+            array[i] = aleatorio(valorMinimo, valorMaximo);
+        }
+    }
+
+    public static double aleatorio(double valorMinimo, double valorMaximo){
+        Random random = new Random();
+        return valorMinimo + random.nextDouble() * (valorMaximo - valorMinimo);
+    }
+
+    public static double mediaArray(double[] array){
+        double suma = 0;
+        for (double numero : array){
+            suma += numero;
+        }
+        return suma / array.length;
     }
 }

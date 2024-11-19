@@ -1,21 +1,18 @@
 package com.mireyaserrano.tema05.arrays;
 
 import com.mireyaserrano.tema05.lib.Escaner;
+import com.mireyaserrano.tema05.lib.IO;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Ejercicio1 {
     public static void main(String args[]){
-        int[] numeros = new int[10];
-        float media = 0;
-        for (int i = 0; i < numeros.length; i++){
-            System.out.println("Introduce el elemento núemerico " + (i+1));
-            int num = Escaner.lector.nextInt();
-            numeros[i] = num;
-        }
-        for (int j = 0; j < numeros.length; j++){
-            media += numeros[j];
-            System.out.print(numeros[j] + ", ");
-        }
-        media = media/numeros.length;
-        System.out.println("\nLa media de los números introducidos es de " + media);
+        final int TAMANYO_ARRAY = 10;
+        double[] numeros = new double[10];
+        IO.rellenarArray(numeros, 0, 10);
+        System.out.println(IO.arrayToString(numeros, 8));
+        System.out.println(Arrays.toString(numeros));
+        System.out.printf("La media del array es %.2f\n", IO.mediaArray(numeros));
     }
 }
