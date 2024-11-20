@@ -94,6 +94,18 @@ public class IO{
         return suma / array.length;
     }
 
+    public static double mediaArrayCondicion(double[] array, int num){
+        double suma = 0;
+        int contador = 0;
+        for (double numero : array){
+            if (numero >= num){
+                suma += numero;
+                contador += 1;
+            }
+        }
+        return suma / contador;
+    }
+
 
     public static void solicitarDatosArray(char[] array){
         if (array == null){
