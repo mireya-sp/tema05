@@ -4,7 +4,12 @@ import com.mireyaserrano.tema05.lib.IO;
 import java.util.Scanner;
 
 public class Ejercicio5 {
-
+    /**
+     * metodo para saber cuantos numeros son superiores a una media
+     * @param array el array que tiene los numeros que vamos a recorrer comparandolos con la media
+     * @param media la media a la que comparar los numeros
+     * @return la cantidad de numeros superiores a la media
+     */
     public static int superiorMedia(double[] array, double media){
         int contador = 0;
         for (double numero : array){

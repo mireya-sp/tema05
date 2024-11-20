@@ -65,7 +65,7 @@ public class IO{
             if (i == array.length-1){
                 coma = "";
             }
-            sb.append(espacio).append(String.format("%.4f", array[i])).append(coma);
+            sb.append(espacio).append(String.format(formato, array[i])).append(coma);
             if (i == 0){
                 espacio = " ";
             }
@@ -78,6 +78,13 @@ public class IO{
         Random random = new Random();
         for (int i = 0; i < array.length; i++){
             array[i] = aleatorio(valorMinimo, valorMaximo);
+        }
+    }
+
+    public static void rellenarArray(int[] array, int valorMinimo, int valorMaximo){
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++){
+            array[i] = random.nextInt(valorMinimo, valorMaximo+1);
         }
     }
 
