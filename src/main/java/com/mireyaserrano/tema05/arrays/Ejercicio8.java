@@ -5,13 +5,20 @@ import com.mireyaserrano.tema05.lib.IO;
 import java.util.Scanner;
 
 public class Ejercicio8 {
-
-    public static boolean buscarNum(double[] array, double num){
+    /**
+     * busca si un número está en un array
+     * @param array el array dado donde buscar el número
+     * @param num el número a buscar en el array
+     * @return en caso de que no esté devuelve un -1, y si lo encuentra devuelve la posición del array donde se encuentra el número
+     */
+    public static int indexOf(double[] array, double num){
         boolean valido = false;
         for (int i = 0; i < array.length; i++){
-            valido = (array[i] == num);
+            if (array[i] == num){
+                return i;
+            }
         }
-        return valido;
+        return -1;
     }
 
     public static void main(String args[]){
@@ -24,10 +31,10 @@ public class Ejercicio8 {
 
         double[] array = new double[TAMANYO_ARRAY];
         IO.rellenarArray(array, 0, 100);
-        if (!buscarNum(array, num)){
+        if (indexOf(array, num) == -1){
             System.out.println("No se ha encontrado el número");
         }else {
-            System.out.println("Se ha encontrado el número");
+            System.out.printf("Se ha encontrado el número en la posición %d del array", indexOf(array, num));
         }
     }
 }
