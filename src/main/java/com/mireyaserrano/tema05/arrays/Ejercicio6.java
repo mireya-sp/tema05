@@ -1,7 +1,6 @@
 package com.mireyaserrano.tema05.arrays;
 
-import com.mireyaserrano.tema05.lib.Escaner;
-import com.mireyaserrano.tema05.lib.IO;
+import com.mireyaserrano.tema05.lib.MetodosArrays;
 
 public class Ejercicio6 {
     /**
@@ -34,11 +33,11 @@ public class Ejercicio6 {
         int[] array2 = new int[TAMANYO_ARRAY];
         double[] suma = new double[TAMANYO_ARRAY];
         double[] division = new double[TAMANYO_ARRAY];
-        IO.rellenarArray(array1, 1, 10);
-        IO.rellenarArray(array2, 1, 10);
+        MetodosArrays.rellenarArray(array1, 1, 10);
+        MetodosArrays.rellenarArray(array2, 1, 10);
         sumaArrays(suma, array1, array2);
         divisionArrays(division, array1, array2);
-        System.out.println(IO.arrayToString(suma, 0));
-        System.out.println(IO.arrayToString(division, 2));
+        System.out.println(MetodosArrays.arrayToString(suma, 0));
+        System.out.println(MetodosArrays.arrayToString(division, 2));
     }
 }

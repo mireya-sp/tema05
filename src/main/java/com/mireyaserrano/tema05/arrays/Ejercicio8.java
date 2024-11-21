@@ -1,7 +1,6 @@
 package com.mireyaserrano.tema05.arrays;
 
-import com.mireyaserrano.tema05.lib.IO;
-
+import com.mireyaserrano.tema05.lib.MetodosArrays;
 import java.util.Scanner;
 
 public class Ejercicio8 {
@@ -30,7 +29,7 @@ public class Ejercicio8 {
         scanner.close();
 
         double[] array = new double[TAMANYO_ARRAY];
-        IO.rellenarArray(array, 0, 100);
+        MetodosArrays.rellenarArray(array, 0, 100);
         if (indexOf(array, num) == -1){
             System.out.println("No se ha encontrado el número");
         }else {

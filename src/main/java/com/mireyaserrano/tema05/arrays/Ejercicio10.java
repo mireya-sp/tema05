@@ -1,7 +1,6 @@
 package com.mireyaserrano.tema05.arrays;
 
-import com.mireyaserrano.tema05.lib.IO;
-
+import com.mireyaserrano.tema05.lib.MetodosArrays;
 import java.util.Random;
 
 public class Ejercicio10 {
@@ -18,11 +17,11 @@ public class Ejercicio10 {
     public static void main(String args[]){
         final int TAMANYO_ARRAY = 10;
         double[] arrayP = new double[TAMANYO_ARRAY];
-        IO.solicitarDatosArray(arrayP);
-        System.out.println(IO.arrayToString(arrayP, 4));
+        MetodosArrays.solicitarDatosArray(arrayP);
+        System.out.println(MetodosArrays.arrayToString(arrayP, 4));
         double[] arrayS = arrayP;
         llenarArrayS(arrayS);
-        System.out.println(IO.arrayToString(arrayS, 4));
+        System.out.println(MetodosArrays.arrayToString(arrayS, 4));
 
     }
 }

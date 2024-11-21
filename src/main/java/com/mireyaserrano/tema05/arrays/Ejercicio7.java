@@ -1,6 +1,6 @@
 package com.mireyaserrano.tema05.arrays;
 
-import com.mireyaserrano.tema05.lib.IO;
+import com.mireyaserrano.tema05.lib.MetodosArrays;
 
 public class Ejercicio7 {
     /**
@@ -33,7 +33,7 @@ public class Ejercicio7 {
     public static void main(String args[]){
         final int TAMANYO_ARRAY = 100;
         int[] array = new int[TAMANYO_ARRAY];
-        IO.rellenarArray(array, 0, 100);
+        MetodosArrays.rellenarArray(array, 0, 100);
         multiplos(array, 5);
         ceros(array);
         multiplos(array, 10);

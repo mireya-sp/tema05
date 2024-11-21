@@ -1,6 +1,6 @@
 package com.mireyaserrano.tema05.arrays;
 
-import com.mireyaserrano.tema05.lib.IO;
+import com.mireyaserrano.tema05.lib.MetodosArrays;
 import java.util.Scanner;
 
 public class Ejercicio5 {
@@ -25,8 +25,8 @@ public class Ejercicio5 {
         System.out.println("Introduzca el numero de estaturas que va a introducir:");
         final int TAMANYO_ARRAY = Integer.parseInt(scanner.nextLine());
         double[] estaturas = new double[TAMANYO_ARRAY];
-        IO.solicitarDatosArray(estaturas);
-        System.out.println("La media de estaturas es de " + IO.mediaArray(estaturas));
-        System.out.println("Hay " + superiorMedia(estaturas, IO.mediaArray(estaturas)) + " estaturas superiores a la media");
+        MetodosArrays.solicitarDatosArray(estaturas);
+        System.out.println("La media de estaturas es de " + MetodosArrays.mediaArray(estaturas));
+        System.out.println("Hay " + superiorMedia(estaturas, MetodosArrays.mediaArray(estaturas)) + " estaturas superiores a la media");
     }
 }
