@@ -6,6 +6,12 @@ import java.util.Arrays;
 
 public class linealOrdenado {
 
+    /**
+     * busca un número en un array aleatorio ordenado
+     * @param array el array aleatorio ordenado donde se va a buscar el número
+     * @param numABuscar el número a buscar en el array aleatorio ordenado
+     * @return si encuentra el número devuelve la posición del array que ocupaba, si el valor se pasa devuelve -1
+     */
     public static int buscarNumero(int[] array, int numABuscar){
         for (int i = 0; i < array.length; i++){
             if (array[i] == numABuscar){
