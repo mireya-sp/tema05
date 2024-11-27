@@ -1,7 +1,5 @@
 package com.mireyaserrano.tema05.arrays;
 
-import java.util.Arrays;
-
 public class Seleccion {
 
 

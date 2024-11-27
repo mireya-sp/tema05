@@ -11,9 +11,15 @@ public class CountingSort {
             return;
         }
         int[] arrayConteo = new int[max + 1];
+        int contador = 0;
         for (int i = 0; i < array.length; i++){
             arrayConteo[array[i]]++;
         }
-        //Falta array devuelta
+        for (int i = 0; i < arrayConteo.length; i++){
+            int cantidad = arrayConteo[i];
+            for (int j = 0; j < cantidad; j++){
+                array[contador++] = i;
+            }
+        }
     }
 }
