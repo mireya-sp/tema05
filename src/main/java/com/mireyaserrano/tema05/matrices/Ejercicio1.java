@@ -12,7 +12,7 @@ public class Ejercicio1 {
 
         double[][]  matriz = new double[filas][columnas];
         Matrices.solicitarDatosMatrices(matriz);
-        Matrices.mostrarMatrices(matriz, 4);
+        Matrices.matrizToString(matriz, 4, 5);
 
     }
 }

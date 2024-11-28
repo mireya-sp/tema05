@@ -17,6 +17,6 @@ public class Ejercicio2 {
                 matriz[i][j] = arrayV[i] * arrayP[j];
             }
         }
-        Matrices.mostrarMatrices(matriz, 0);
+        Matrices.matrizToString(matriz, 0, 5);
     }
 }
