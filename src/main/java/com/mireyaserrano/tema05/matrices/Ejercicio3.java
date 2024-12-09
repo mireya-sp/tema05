@@ -46,7 +46,6 @@ public class Ejercicio3 {
 
     private static void play(){
         boolean valido;
-        System.out.println(tableroToString(tablero));
         char fila = ' ', columna = ' ';
         System.out.println("Turno " + turnoActual + "(" + getFichaJugador(turnoActual) + ")");
         do {
@@ -70,6 +69,7 @@ public class Ejercicio3 {
             }
         }while (!valido);
         tablero[getFilaReal(fila)][getColumnaReal(columna)] = getFichaJugador(turnoActual);
+        System.out.println(tableroToString(tablero));
     }
 
     private static Ficha getFichaJugador(Jugador jugador){
@@ -127,12 +127,11 @@ public class Ejercicio3 {
         return jugadores[(turnoActual.ordinal() + 1) % jugadores.length];
     }
 
-    private static boolean esEmpate(){
-        for (int i = 0; i < tablero.length; i++){
-            for (int j = 0; j < tablero[i].length; j++){
-                if (tablero[i][j] == Ficha.NONE){
-                    return false;
-                }
+    private static boolean esTableroLleno(){
+        for (Ficha[] filas : tablero){
+            for (Ficha ficha : filas){
+                if (ficha.equals(Ficha.NONE));
+                return false;
             }
         }
         return true;
@@ -157,7 +156,8 @@ public class Ejercicio3 {
         tablero = new Ficha[FILAS][COLUMNAS];
         boolean partidaFinalizada;
         boolean hayGanador;
-        boolean exit;
+        boolean empate;
+        boolean salir = false;
         do{
             reset();
             do {
@@ -165,18 +165,17 @@ public class Ejercicio3 {
                 hayGanador = esJugadaGanadora(tablero, getFichaJugador(turnoActual));
                 if (!hayGanador) {
                     turnoActual = siguienteTurno();
-                } else {
-                    System.out.println(tableroToString(tablero));
-                    System.out.println(turnoActual + " HA GANADO!");
                 }
-                if (esEmpate() && !hayGanador) {
-                    System.out.println(tableroToString(tablero));
-                    System.out.println("EMPATE");
-                }
-                partidaFinalizada = hayGanador || esEmpate();
+                empate = !hayGanador && esTableroLleno();
+                partidaFinalizada = hayGanador || empate;
             } while (!partidaFinalizada);
-            System.out.println("Elija una opción:\n1. Jugar otra vez.\n0. Salir.");
-            exit = salir();
-        }while (!exit);
+            if (hayGanador){
+                System.out.println(turnoActual + " HA GANADO!");
+            }else{
+                System.out.println("EMPATE");
+            }
+            System.out.println("¿Desea jugar una nueva partida? (s/n)");
+            salir = scanner.nextLine().toLowerCase().charAt(0) == 's';
+        }while (!salir);
     }
 }
