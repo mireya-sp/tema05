@@ -134,6 +134,18 @@ public class MetodosArrays {
         return longitudMaxima;
     }
 
+    public static int determinarLongitudMaxima(int[] array){
+        int longitudMaxima = 0;
+        String formato = "%d";
+        for (int numero : array){
+            int longitudActual = String.format(formato, numero).length();
+            if (longitudMaxima < longitudActual){
+                longitudMaxima = longitudActual;
+            }
+        }
+        return longitudMaxima;
+    }
+
     public static String arrayToString(double[] array, int decimales, int columnas){
         return arrayToString(array, decimales, columnas, 2);
     }
