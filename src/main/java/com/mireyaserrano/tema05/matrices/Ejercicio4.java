@@ -5,6 +5,11 @@ import com.mireyaserrano.tema05.lib.Matrices;
 
 public class Ejercicio4 {
 
+    /**
+     * realiza una matriz traspuesta
+     * @param matriz la matriz que vamos a trasponer
+     * @return una matriz nueva que es la traspuesta de la anterior
+     */
     public static int[][] matrizTraspuesta(int[][] matriz){
         int[][] matrizT = new int[matriz[0].length][matriz.length];
         for (int i = 0; i < matriz.length; i++){
@@ -15,16 +20,11 @@ public class Ejercicio4 {
         return matrizT;
     }
 
-    public static String[][] matrizPorFilaSuma(int[][] matriz){
-        String[][] matrizFilasSumadas = new String[matriz.length][matriz[0].length];
-        for (int i = 0; i < matriz.length; i++){
-            for (int j = 0; j < matriz[i].length; j++){
-                //matrizFilasSumadas[i][j] =
-            }
-        }
-        return matrizFilasSumadas;
-    }
-
+    /**
+     * calcula cuales son los valores min y max de una matriz
+     * @param matriz la matriz donde hay que busacr los valores minimo y maximo
+     * @return un array que en la posición cero tiene el valor mínimo y el la posicion 1 tiene el valor máximo
+     */
     public static int[] valoresMaxYMin(int[][] matriz){
         int valorMax = 0;
         int valorMin = 101;
@@ -44,6 +44,11 @@ public class Ejercicio4 {
         return valoresMaxMin;
     }
 
+    /**
+     * saca la media de una matriz
+     * @param matriz la matriz de la que vamos a hacer la media
+     * @return la media de todos los valores de la matriz
+     */
     public static double mediaMatriz(int[][] matriz){
         int sumaMatriz = 0;
         for (int i = 0; i < matriz.length; i++){
@@ -55,6 +60,11 @@ public class Ejercicio4 {
         return media;
     }
 
+    /**
+     * en la columna final guarda la suma de todos los valores de la fila y cambia el valor de la ultima columna sin tenerlo en cuenta
+     * @param matriz matriz que vamos a modificar
+     * @return la matriz que en la última columna tiene la suma de las anteriores
+     */
     public static int[][] columna8GuardaAnteriores(int[][] matriz){
         for (int i = 0; i < matriz.length; i++){
             int sumaFila = 0;
